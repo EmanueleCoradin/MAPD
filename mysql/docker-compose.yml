@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: "my_pwd"
       MYSQL_ROOT_PASSWORD: "root_pwd"
     volumes:
-      - $PWD:/mapd-workspace
+      - .:/mapd-workspace
     command: --secure_file_priv="/mapd-workspace"
 
   jupyter:
@@ -20,4 +20,4 @@ services:
     ports:
       - 1234:8888
     volumes:
-      - $PWD:/mapd-workspace
+      - .:/mapd-workspace
